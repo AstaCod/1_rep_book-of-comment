@@ -7,7 +7,6 @@ module.exports = gql`
         lastName: String
         comments: [Comment]
     }
-
     type Comment {
         _id: ID
         user: User
