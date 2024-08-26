@@ -1,10 +1,14 @@
 {
   "name": "1_rep_book-of-comment",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "test": "mocha src/_test/user/userCreate.spec.js",
+    "test_user2": "mocha src/_test/user1/5_userCreate1.spec.js",
+    "test_userGetById": "mocha src/_test/user/userGetById.spec.js",
+    "test_userGetById_1": "mocha src/_test/user1/1_userGetById1.spec.js",
+
+    "start": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +19,14 @@
     "express": "^4.19.2",
     "graphql": "^16.9.0",
     "mongodb": "^6.8.0",
-    "mongoose": "^8.5.4",
+    "mongoose": "^8.5.1"
+
+  },
+  "devDependencies": {
+    "supertest": "^6.3.3",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
     "nodemon": "^3.1.4"
   }
 }
