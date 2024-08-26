@@ -12,4 +12,11 @@ const userGetByIdQ = `query UserGetById($userId: ID!) {
     _id
   }
 }`
-module.exports = { userCreateQ,userGetByIdQ }
+const userGetByIdQ_1 = `query UserGetById($userId: ID!) {
+  userGetById(userId: $userId) {
+    firstName
+    lastName
+    _id
+  }
+}`
+module.exports = { userCreateQ,userGetByIdQ,userGetByIdQ_1 }

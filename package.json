@@ -6,6 +6,7 @@
     "test": "mocha src/_test/user/userCreate.spec.js",
     "test_user2": "mocha src/_test/user1/5_userCreate1.spec.js",
     "test_userGetById": "mocha src/_test/user/userGetById.spec.js",
+    "test_userGetById_1": "mocha src/_test/user1/1_userGetById1.spec.js",
 
     "start": "nodemon src/index.js"
   },
