@@ -12,23 +12,23 @@ describe('USER GET BY ID',() => {
             postData = {
                query: userGetByIdQ,
                 variables: {
-                    userId: null
+                    userId: '66cbc6795bcb1bb0f29fe119'
                 }
             }
             gqlRequest(postData)
                 .expect(200)
                 .end((err, res) => {
                     if (err) return done(err)
-                    respData = res.body;
+                    respData = res.body.data.userGetById;
                     console.log(respData);
-                    expect(respData).eq();  //assertion chai
+                    expect(respData._id).eq('66cbc6795bcb1bb0f29fe119');  //assertion chai
                     done()
                 })
         })
     })
-    describe('USER GET BY ID - NEGATIVE TEST',() => {
-
-      })
+    // describe('USER GET BY ID - NEGATIVE TEST',() => {
+    //
+    //   })
 })
 
 
